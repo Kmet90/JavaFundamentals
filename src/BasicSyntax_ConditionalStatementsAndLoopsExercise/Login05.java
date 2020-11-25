@@ -13,7 +13,7 @@ public class Login05 {
             String password = scanner.nextLine();
             String newPassword = "";
             for (int i = password.length() - 1; i >= 0; i--) {
-                newPassword = newPassword + password.charAt(i);
+                newPassword += password.charAt(i);
             }
             if (user.equals(newPassword)) {
                 System.out.printf("User %s logged in.", user);
