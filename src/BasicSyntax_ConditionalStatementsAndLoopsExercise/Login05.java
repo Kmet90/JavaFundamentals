@@ -11,11 +11,11 @@ public class Login05 {
 
         while (true) {
             String password = scanner.nextLine();
-            String newPassword = "";
+            StringBuilder newPassword = new StringBuilder();
             for (int i = password.length() - 1; i >= 0; i--) {
-                newPassword += password.charAt(i);
+                newPassword.append(password.charAt(i));
             }
-            if (user.equals(newPassword)) {
+            if (user.equals(newPassword.toString())) {
                 System.out.printf("User %s logged in.", user);
                 break;
             } else {
