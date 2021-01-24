@@ -11,7 +11,7 @@ public class IntegerOperations {
         int thirdNumber = Integer.parseInt(scanner.nextLine());
         int fortNumber = Integer.parseInt(scanner.nextLine());
 
-        int sum = (int)((firstNumber+secondNumber)/thirdNumber)*fortNumber;
+        int sum = ((firstNumber+secondNumber)/thirdNumber)*fortNumber;
 
         System.out.println(sum);
     }
