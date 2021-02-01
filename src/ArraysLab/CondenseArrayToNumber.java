@@ -9,7 +9,7 @@ public class CondenseArrayToNumber {
 
         int[] nums = Arrays
                 .stream(scanner.nextLine().split(" "))
-                .mapToInt(value -> Integer.parseInt(value))
+                .mapToInt(Integer::parseInt)
                 .toArray();
 
         while (nums.length > 1) {
