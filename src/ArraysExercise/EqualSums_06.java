@@ -9,7 +9,7 @@ public class EqualSums_06 {
 
         int[] numbers = Arrays.stream(scanner.nextLine().split(" "))
                 .mapToInt(Integer::parseInt).toArray();
-        boolean flag = false;
+       // boolean flag = false;
 
         for (int i = 0; i <= numbers.length - 1; i++) {
         int leftSum = 0;
@@ -22,11 +22,12 @@ public class EqualSums_06 {
             }
             if (leftSum == rightSum) {
                 System.out.println(i);
-                flag=true;
+                return;
+              //  flag=true;
             }
         }
-        if (!flag) {
+        //if (!flag) {
             System.out.println("no");
-        }
+       // }
     }
 }
