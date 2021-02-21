@@ -1,0 +1,28 @@
+package ProgrammingFundamentalsMidExam;
+
+import java.util.Scanner;
+
+public class BonusScoringSystem_01 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int students = Integer.parseInt(scanner.nextLine());
+        int lectures = Integer.parseInt(scanner.nextLine());
+        int bonus = Integer.parseInt(scanner.nextLine());
+        double totalBonus;
+        double maxBonus = 0;
+        int studentsAttend = 0;
+
+        for (int i = 0; i < students; i++) {
+            int attendances = Integer.parseInt(scanner.nextLine());
+            totalBonus = (attendances * 1.0 / lectures * (5 + bonus));
+            if (maxBonus <= totalBonus) {
+                maxBonus = totalBonus;
+                studentsAttend = attendances;
+            }
+        }
+
+        System.out.printf("Max Bonus: %.0f.%n", Math.ceil(maxBonus));
+        System.out.printf("The student has attended %d lectures.", studentsAttend);
+    }
+}
