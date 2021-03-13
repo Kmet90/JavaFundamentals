@@ -43,7 +43,6 @@ public class FancyBarcodes_02 {
         return number.toString();
     }
 
-
     private static boolean checkCharacterLength(String password) {
         return password.length() >= 6;
     }
